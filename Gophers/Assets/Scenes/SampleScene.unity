@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.5748171, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -225,6 +225,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &244833882
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 244833883}
+  m_Layer: 0
+  m_Name: HydroPress
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &244833883
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 244833882}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1943996584}
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &324664105
 Prefab:
   m_ObjectHideFlags: 0
@@ -731,6 +760,11 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 48e5b2a8ba7ad4f59a5a8e28fa25efc6, type: 2}
   m_IsPrefabAsset: 0
+--- !u!4 &1943996584 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4060149147440794, guid: bb8164140c7fa46b2baa2ea6b2095864,
+    type: 2}
+  m_PrefabInternal: {fileID: 2129655517}
 --- !u!1001 &1949478182
 Prefab:
   m_ObjectHideFlags: 0
@@ -778,31 +812,31 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 244833883}
     m_Modifications:
     - target: {fileID: 4060149147440794, guid: bb8164140c7fa46b2baa2ea6b2095864, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4060149147440794, guid: bb8164140c7fa46b2baa2ea6b2095864, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 14.94
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 4060149147440794, guid: bb8164140c7fa46b2baa2ea6b2095864, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4060149147440794, guid: bb8164140c7fa46b2baa2ea6b2095864, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4060149147440794, guid: bb8164140c7fa46b2baa2ea6b2095864, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4060149147440794, guid: bb8164140c7fa46b2baa2ea6b2095864, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4060149147440794, guid: bb8164140c7fa46b2baa2ea6b2095864, type: 2}
       propertyPath: m_LocalRotation.w
@@ -810,7 +844,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4060149147440794, guid: bb8164140c7fa46b2baa2ea6b2095864, type: 2}
       propertyPath: m_RootOrder
-      value: 12
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 23916203838921436, guid: bb8164140c7fa46b2baa2ea6b2095864,
         type: 2}
