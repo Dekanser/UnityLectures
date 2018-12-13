@@ -20,6 +20,8 @@ public class Motor : MonoBehaviour {
 
     public void Move(Vector3 point)
     {
-        agent.destination = point;
+        //agent.destination = point;
+        agent.SetDestination(point);
+        Debug.Log(agent.destination);
     }
 }

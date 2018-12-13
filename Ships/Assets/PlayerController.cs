@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.AI;
 
 public class PlayerController : MonoBehaviour {
 
@@ -18,7 +19,7 @@ public class PlayerController : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
     {
-        Time.timeScale = 0;
+        Time.timeScale = 1;
         motor = GetComponent<Motor>();
         combat = GetComponent<Combat>();
 	}
@@ -42,49 +43,50 @@ public class PlayerController : MonoBehaviour {
             {
                 if (hit.collider.CompareTag("Ocean"))
                 {
-                    Debug.Log(hit.point);
 
                     newPoint = hit.point;
-                    motor.Move(newPoint);
+                    //Debug.Log(hit.point);
+                    GetComponent<NavMeshAgent>().destination = newPoint;
                 }
             }
         }
 
-        if (Input.GetKey(KeyCode.E))
-            combat.rAim.enabled = true;
-        else
-            combat.rAim.enabled = false;
+        //motor.Move(newPoint);
+        /*      if (Input.GetKey(KeyCode.E))
+                  combat.rAim.enabled = true;
+              else
+                  combat.rAim.enabled = false;
 
-        if (Input.GetKeyUp(KeyCode.E) && combat.CanShotRight)
-        {
-            combat.ShotRight();
-            RightDelay = 10;
-        }
+              if (Input.GetKeyUp(KeyCode.E) && combat.CanShotRight)
+              {
+                  combat.ShotRight();
+                  RightDelay = 10;
+              }
 
-        if (Input.GetKey(KeyCode.Q))
-            combat.lAim.enabled = true;
-        else
-            combat.lAim.enabled = false;
+              if (Input.GetKey(KeyCode.Q))
+                  combat.lAim.enabled = true;
+              else
+                  combat.lAim.enabled = false;
 
-        if (Input.GetKeyUp(KeyCode.Q) && combat.CanShotLeft)
-        {
-            combat.ShotLeft();
-            LeftDelay = 10;
-        }
-
-
-        if(LeftDelay >= 0)
-        {
-            LeftDelay -= Time.deltaTime;
-            LI.fillAmount = LeftDelay / 10f;
-        }
-
-        if(RightDelay >= 0)
-        {
-            RightDelay -= Time.deltaTime;
-            RI.fillAmount = RightDelay / 10f;
-        }
+              if (Input.GetKeyUp(KeyCode.Q) && combat.CanShotLeft)
+              {
+                  combat.ShotLeft();
+                  LeftDelay = 10;
+              }
 
 
-	}
+              if(LeftDelay >= 0)
+              {
+                  LeftDelay -= Time.deltaTime;
+                  LI.fillAmount = LeftDelay / 10f;
+              }
+
+              if(RightDelay >= 0)
+              {
+                  RightDelay -= Time.deltaTime;
+                  RI.fillAmount = RightDelay / 10f;
+              }
+              */
+
+    }
 }
