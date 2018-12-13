@@ -22,7 +22,6 @@ public class PlayerController : MonoBehaviour
             Punch();
         }
 
-        Hand.transform.position = Vector3.Lerp(Hand.transform.position, NewPoint, 0.6f);
     }
 
     public void Punch()
@@ -32,14 +31,12 @@ public class PlayerController : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, 1000))
         {
-            if (hit.collider.CompareTag("Hole"))
+            GopherScript gopher = hit.collider.gameObject.GetComponent<GopherScript>();
+
+            if (gopher != null)
             {
-                if(anim.GetBool("Punch"))
-                {
-                    anim.SetBool("NotPunch", true);
-                }
-                StopAllCoroutines();
-                StartCoroutine(MoveTo(hit.collider.transform.position));
+                Debug.Log(gopher.name);
+                gopher.Punch();
             }
         }
 

@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Hole
+  - Gopher
+  - Undefined
+  - Hydra
   layers:
   - Default
   - TransparentFX
